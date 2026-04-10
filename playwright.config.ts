@@ -129,6 +129,24 @@
 //     }
 //   ],
 // });
+// import { defineConfig, devices } from '@playwright/test';
+
+// export default defineConfig({
+//   testDir: './tests',
+//   reporter: 'html',
+
+//   use: {
+//     headless: true, // ✅ required for GitHub
+//     trace: 'on-first-retry'
+//   },
+
+//   projects: [
+//     {
+//       name: 'chromium',
+//       use: { ...devices['Desktop Chrome'] },
+//     }
+//   ],
+// });
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -136,8 +154,8 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    headless: true, // ✅ required for GitHub
-    trace: 'on-first-retry'
+    headless: true, // ✅ required for GitHub Actions
+    trace: 'on-first-retry',
   },
 
   projects: [
